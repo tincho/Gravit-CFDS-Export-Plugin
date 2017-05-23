@@ -26,12 +26,7 @@ npm install
 with the command line on the folder that contains your package.json file. Wait for the installation of dependencies (which contains a ~10MB zip downloaded from Gravit's website with Gravit Designer's code) and you're all set!
 
 ### Running
-After instaling all the dependencies, you're ready to start Gravit Designer. You have two options to start the electron server.
-1 - If gulp is not installed globally on your system
-```
-./node_modules/gulp/bin/gulp.js start
-```
-2 - If gulp is installed globally (npm install -g gulp)
+After instaling all the dependencies, you're ready to start Gravit Designer. You can start it using
 ```
 gulp start
 ```
@@ -72,6 +67,21 @@ All Gravit Designer functions you can use on your plugins are available within t
 
 ### Debugging
 Like any other web-based application, any plugin can be debugged using the Developer Tools. The plugin files will be loaded into the application, allowing developers to debug it the same way they would if the plugin was a part of Gravit Designer.
+
+### Important Gravit Designer variables
+
+#### gDesigner
+Global variable that contains all extensions Gravit Designer loads. It's also the easiest way to acquire your current document, pages, elements and everything related to the design.
+
+#### gravit
+Global variable that contains the extensions Gravit Designer loads. Currently, it stores actions, sidebars, panels, tools, properties and plugins. It's also the variable that the plugins init() functions receive as parameter.
+
+#### gContainer
+Gravit Designer's global variable that contains functions specific for every version of Gravit Designer. I. E., the browser version of
+Gravit Designer implements gContainer in a certain way, while Desktop version implements in other way that best fits it's needs.
+
+#### GDocument
+Class that represents the documents of Gravit Designer. The documents currently opened by Gravit Designer can be easily retrieved using gDesigner.
 
 ## Publishing
 In future, Gravit will provide a way to share and publish your plugins. Stay tuned for news!

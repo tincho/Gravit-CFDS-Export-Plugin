@@ -24,6 +24,6 @@ var download = function(url, dest, cb) {
   });
 };
 
-download('//when available, Gravit Designer source code URL will be here', __dirname + '/gravit-designer.zip', function(err) {
+download('https://designer.gravit.io/_downloads/mac/GravitDesignerPlugin.zip', __dirname + '/gravit-designer.zip', function(err) {
 	if (err) throw err;
 });

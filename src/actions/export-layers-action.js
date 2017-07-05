@@ -7,7 +7,7 @@ var GAction = GravitDesigner.GAction;
 var ExportDialog = require('./export-layers-action/exportdialog.js');
 
 /**
- * Action for counting the number of selected elements
+ * Action for export page layers to png/svg
  * @class ExportLayersAction
  * @extends GAction
  * @constructor
@@ -37,7 +37,7 @@ ExportLayersAction.prototype.getTitle = function () {
  */
 ExportLayersAction.prototype.getCategory = function () {
     //the menu category the action will be placed on
-    return 'starter-plugin';
+    return 'Export';
 };
 
 /**

@@ -35,47 +35,9 @@ class ExportDialog {
                 .append($('<option/>')
                     .text('All pages')
                     .data('option', ALL_PAGES)));
-        var check_space = $('<div/>')
-            .append($('<input/>')
-              .attr('type', 'checkbox')
-              .attr('name', 'check_space'))
-            .append($('<span/>')
-              .text('Mes pièces sont collés ensemble, je n\'ai pas d\'espace vide. Préférablement en forme carrée.'));
-
-        var check_colors = $('<div/>')
-            .append($('<input/>')
-              .attr('type', 'checkbox')
-              .attr('name', 'check_colors'))
-            .append($('<span/>')
-              .text('Tout les objets sont en Rouge (255,0,0,255) ou Noir (0,0,0,255).'));
-
-        var check_lines = $('<div/>')
-            .append($('<input/>')
-              .attr('type', 'checkbox')
-              .attr('name', 'check_lines'))
-            .append($('<span/>')
-              .text('Les lignes sont d\'une épaisseur de 1 Pixel.'));
-
-        var nameDiv = $('<div/>')
-            .append($('<div/>')
-                .append($('<span/>')
-                  .text('Votre nom')))
-            .append($('<input/>')
-                .attr('data-property', 'name')
-                .attr('class', 'name-input'));
-
-        var textDiv = $('<div/>')
-            .attr('class', 'img-div')
-            .append($('<img/>')
-                .attr('src', process.cwd() + "/src/assets/logo.png")
-                .attr('class', 'img'));
 
         this._dialog = $('<div></div>')
-            .append(check_space)
-            .append(check_colors)
-            .append(check_lines)
-            .append(nameDiv)
-            .append(textDiv);
+            .append(process.cwd() + "/src/actions/export-layers-action/dialog.html");
 
         //gDialog is a jquery plugin that allows creating of ready-to-use dialogs
         this._dialog.gDialog({
@@ -83,8 +45,8 @@ class ExportDialog {
             className: 'g-export-layers-dialog',
             //the buttons available on the dialog
             buttons: [
-                $('<button>Annuler</button>').on('click', () => this.close()),
-                $('<button>Exporter</button>').on('click', () => {
+                $('<button>Cancel</button>').on('click', () => this.close()),
+                $('<button>Export</button>').on('click', () => {
                     this._exportLayers();
                     this.close();
                 })

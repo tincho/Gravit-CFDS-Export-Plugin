@@ -11,7 +11,7 @@
 }
 
 .g-export-layers-dialog input {
-    margin-right: 10px;
+    margin-left: 10px;
 }
 
 .g-export-layers-dialog .name-input {
@@ -19,11 +19,6 @@
     width: 100%;
 }
 
-.g-export-layers-dialog .img-div {
-    text-align: center;
-    display: block;
-}
-
 .g-export-layers-dialog .img {
-    height: 50px;
+    margin-left: 10px;
 }

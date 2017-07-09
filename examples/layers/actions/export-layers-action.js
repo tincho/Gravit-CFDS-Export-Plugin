@@ -29,7 +29,7 @@ ExportLayersAction.prototype.getId = function () {
  * @override
  */
 ExportLayersAction.prototype.getTitle = function () {
-    return 'Export for laser cutting';
+    return 'Export Layers';
 };
 
 /**
@@ -37,7 +37,7 @@ ExportLayersAction.prototype.getTitle = function () {
  */
 ExportLayersAction.prototype.getCategory = function () {
     //the menu category the action will be placed on
-    return 'CFDS';
+    return 'Export';
 };
 
 /**
